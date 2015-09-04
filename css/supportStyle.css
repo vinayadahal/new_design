@@ -241,6 +241,16 @@ body{
     background-size: cover;
 }
 
+.teamIcon{
+    position: relative;
+    float: left;
+    width: 300px;
+    /*height: 180px;*/
+    /*background-position: 50% 50%;*/
+/*    background-repeat: no-repeat;
+    background-size: cover;*/
+}
+
 .suggestedPnlTitle{
     font-size:15px;
     color: #555;

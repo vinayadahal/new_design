@@ -12,9 +12,11 @@ $titleController = 'Our Team';
 $teamData = $obj_query->select_all('team');
 if (!empty($teamData)) {
     foreach ($teamData as $team) {
-
+        
+        
         if (!empty($team['photo'])) {
             $thumbPath = 'images/team/thumb/' . basename($team['photo']);
+            echo 'photo location: '. $team['photo'];
         } else {
             if ($team['gender'] == 'Male' || $team['gender'] == 'male') {
                 $thumbPath = 'images/team/blankMale.jpg';
