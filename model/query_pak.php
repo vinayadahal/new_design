@@ -15,9 +15,9 @@ class query {
         }
     }
 
-    function select_like($col, $table, $id, $val) { //takes one keyword only also selects distinct
+    function select_like($col, $table, $id, $val, $limit = NULL) { //takes one keyword only also selects distinct
         $field = "`" . implode("`,`", $col) . "`";
-        $query = "SELECT " . $field . " FROM `$table` WHERE `$id` LIKE '%' ? '%'";
+        $query = "SELECT " . $field . " FROM `$table` WHERE `$id` LIKE '%' ? '%' limit $limit";
         $bind = $this->dbh->prepare($query);
         $bind->bindParam(1, $val);
         $res = $bind->execute();

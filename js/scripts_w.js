@@ -1,60 +1,47 @@
-$(document).ready(function () {
-    $('#selectForm').submit(function (e) {
+$(document).ready(function() {
+    $('#selectForm').submit(function(e) {
         console.log($('#selectForm').serializeArray().length);
         if ($('#selectForm').serializeArray().length === 0 || $('#selectForm').serializeArray().length !== 4) {
             alert('Please choose everything from the dropdown.');
             e.preventDefault();
         }
         var values = {};
-        $.each($('#selectForm').serializeArray(), function (i, field) {
+        $.each($('#selectForm').serializeArray(), function(i, field) {
             values[field.name] = field.value;
             console.log(values[field.name]);
         });
     });
-    $('#readMoreClose').click(function () {
+    $('#readMoreClose').click(function() {
         closeReadMore();
     });
-    $('#dropDown, #dropDownItem').mouseover(function () {
+    $('#dropDown, #dropDownItem').mouseover(function() {
         menuListOn();
     });
-    $('#dropDown, #dropDownItem').mouseout(function () {
+    $('#dropDown, #dropDownItem').mouseout(function() {
         menuListOff();
     });
-    $('#dropDownCompany, #dropDownItemCompany').mouseover(function () {
+    $('#dropDownCompany, #dropDownItemCompany').mouseover(function() {
         menuListOnCompany();
     });
-    $('#dropDownCompany, #dropDownItemCompany').mouseout(function () {
+    $('#dropDownCompany, #dropDownItemCompany').mouseout(function() {
         menuListOffCompany();
-    });
-
-    $('#dropDownTrekking, #dropDownItemTrekking').mouseover(function () {
-        menuListOnTrekking();
-    });
-    $('#dropDownTrekking, #dropDownItemTrekking').mouseout(function () {
-        menuListOffTrekking();
-    });
-    $('#dropDownExp, #dropDownItemExp').mouseover(function () {
-        menuListOnExp();
-    });
-    $('#dropDownExp, #dropDownItemExp').mouseout(function () {
-        menuListOffExp();
-    });
-    $('#name_link').click(function () {
+    });    
+    $('#name_link').click(function() {
         show_logout();
     });
-    $('#name_link').focusout(function () {
+    $('#name_link').focusout(function() {
         hide_logout();
     });
 
-    $('#title').change(function () {
+    $('#title').change(function() {
         countChars();
     });
 
-    $('#caption').change(function () {
+    $('#caption').change(function() {
         countCharsCaption();
     });
 
-    $('#selectFeatured').change(function () {
+    $('#selectFeatured').change(function() {
         if ($(this).val() === 'Yes') {
             $('#offer').show();
             $('#lblOffer').show();
@@ -64,7 +51,7 @@ $(document).ready(function () {
         }
     });
 
-    $('#img').change(function () {
+    $('#img').change(function() {
         var filesize = this.files[0].size;
         if (filesize >= 2097152) {
             alert('File size should be less than 2 MB.');
@@ -74,7 +61,7 @@ $(document).ready(function () {
         }
     });
 
-    $("#deleteImage").change(function () {
+    $("#deleteImage").change(function() {
         if (this.checked) {
             $("#browseBtn").css({
                 'display': 'block'
@@ -85,25 +72,21 @@ $(document).ready(function () {
             });
         }
     });
-    $('#closeImage').click(function () {
+    $('#closeImage').click(function() {
         unloadImage();
     });
 
-    $('#showPopForm').click(function () {
+    $('#showPopForm').click(function() {
         loadForm();
     });
 
-    $('#closeForm').click(function () {
+    $('#closeForm').click(function() {
         unloadForm();
     });
 
-    $("#reviewForm").submit(function (event) {
+    $("#reviewForm").submit(function(event) {
         sendReview();
         event.preventDefault();
-    });
-
-    $("#generateIcons").click(function () {
-
     });
 });
 
@@ -125,8 +108,8 @@ function countCharsCaption() {
 
 function countChars() {
     var val = $('#title').val().length;
-    if (val > 40) {
-        alert('Only 40 characters are allowed in title.');
+    if (val > 20) {
+        alert('Only 20 characters are allowed in title.');
         $('#title').css({
             'color': '#f00'
         });
@@ -169,7 +152,7 @@ function checkNull(idName) {
 
 function show_flash(id) {
     $("#" + id).fadeIn('slow');
-    setInterval(function () {
+    setInterval(function() {
         $("#" + id).fadeOut('slow');
     }, 5000);
 }
@@ -177,7 +160,7 @@ function show_flash(id) {
 function showImg(img) {
     if (img.files && img.files[0]) {
         var reader = new FileReader();
-        reader.onload = function (e) {
+        reader.onload = function(e) {
             $('#imgLocation').attr('src', e.target.result);
         },
                 reader.readAsDataURL(img.files[0]);
@@ -235,30 +218,6 @@ function menuListOnCompany() {
 
 function menuListOffCompany() {
     $('#dropDownItemCompany').css({
-        "display": "none"
-    });
-}
-
-function menuListOnTrekking() {
-    $('#dropDownItemTrekking').css({
-        "display": "block"
-    });
-}
-
-function menuListOffTrekking() {
-    $('#dropDownItemTrekking').css({
-        "display": "none"
-    });
-}
-
-function menuListOnExp() {
-    $('#dropDownItemExp').css({
-        "display": "block"
-    });
-}
-
-function menuListOffExp() {
-    $('#dropDownItemExp').css({
         "display": "none"
     });
 }
@@ -343,36 +302,17 @@ function sendReview() {
             type: "POST",
             data: dataString,
             cache: false,
-            complete: function () {
+            complete: function() {
                 $('#loading').hide();
             },
-            success: function () {
+            success: function() {
                 $("#reivewForm").hide();
                 $("#success").show();
             },
-            failure: function () {
+            failure: function() {
                 $("#reivewForm").hide();
                 $("#sendError").show();
             }
         });
     }
-}
-
-function generateIcons(url) {
-    $("#generating").fadeIn();
-    $.ajax({
-        url: url,
-        type: 'get',
-        cache: false,
-        success: function (response) {
-            $("#generating").fadeOut(function () {
-                alert(response);
-            });
-        },
-        failure: function (response) {
-            $("#generating").fadeOut(function () {
-                alert('Cannot generate icons');
-            });
-        }
-    });
 }

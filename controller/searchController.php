@@ -31,7 +31,7 @@ if (!empty($_GET['target'])) {
         $table = 'trip';
         $id = 'title';
         $val = $keyword;
-        $resultSearch = $obj_query->select_like($col, $table, $id, $val);
+        $resultSearch = $obj_query->select_like($col, $table, $id, $val, '12');
     }
 }
 

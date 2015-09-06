@@ -73,9 +73,9 @@ require 'includes/header.php';
         <?php require 'includes/reviewBar.php'; ?>
     </div>
 </div>
+<?php require 'includes/popular.php'; ?>
 <?php require 'includes/latest.php'; ?>
 <?php require 'includes/featured.php'; ?>
-<?php require 'includes/popular.php'; ?>
 <?php require 'includes/otherInfo.php'; ?>
 <script type="text/javascript">
 //    $(function (e, t, n) {

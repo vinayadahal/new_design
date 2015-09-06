@@ -35,4 +35,4 @@ if (isset($_SESSION['alert'])) {
 }
 
 $aboutInformation = $obj_query->select_single(array('title', 'content', 'desc', 'keyword'), 'content', 'keyword', 'about');
-$reviews = $obj_query->select_all_order('review', 'addedOn', 'DESC', '5', 'publish', 'yes');
+$reviews = $obj_query->select_all_order('review', 'addedOn', 'DESC', '3', 'publish', 'yes');

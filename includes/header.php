@@ -42,20 +42,20 @@ header('Expires: ' . gmdate('D, d M Y H:i:s \G\M\T', time() + (60 * 60))); // 1 
         <script type="text/javascript" src="<?php echo baseUrl; ?>js/slideShow.js"></script>
         <script type="text/javascript" src="<?php echo baseUrl; ?>js/jquery-ui.min.js"></script>
         <script type="text/javascript" src="<?php echo baseUrl; ?>js/scripts.js"></script>
-        
+
     </head> 
     <body> 
         <nav class="navbar navbar-default">
             <div class="container-fluid">
-                <!--                <div class="navbar-header">
-                                    <div class="logo"><img src="images/logo.jpg" width="150" height="50"></div>
-                                    <a class="navbar-brand" href="#">Brand</a>
-                                </div>-->
+                <div class="navbar-header">
+                    <!--<div class="logo"><img src="images/logo.jpg" width="150" height="50"></div>-->
+                    <!--<a class="navbar-brand" href="#">Brand</a>-->
+                </div>
                 <div class="collapse navbar-collapse">
                     <ul class="nav navbar-nav" id="menuUl">
                         <li><a href="<?php echo baseUrl; ?>">Home</a></li>
                         <li id="company">
-                            <a href="#">Company <i class="glyphicon glyphicon-triangle-bottom"></i></a>
+                            <a href="#">Company <i class="fa fa-caret-down"></i></a>
                             <div class="menu_list" id="destinationList">
                                 <div id="arrowUp"></div>
                                 <div><a href="<?php echo baseUrl ?>about">About us</a></div>
@@ -64,9 +64,51 @@ header('Expires: ' . gmdate('D, d M Y H:i:s \G\M\T', time() + (60 * 60))); // 1 
                             </div>
                         </li>
                         <li><a href="#">Destination</a></li>
-                        <li><a href="#">Activities</a></li>
-                        <li><a href="#">Trekking</a></li>
-                        <li><a href="#">Expedition</a></li>
+                        <li id="activites">
+                            <a href="#">Activities <i class="fa fa-caret-down"></i></a>
+                            <div class="menu_list" id="activites">
+                                <div id="arrowUp"></div>
+                                <?php
+                                if (!empty($categories)) {
+                                    foreach ($categories as $category) {
+                                        ?>
+                                        <div><a href="<?php echo baseUrl . 'searchType/' . $string = str_replace(' ', '+', $category['category']); ?>"><?php echo ucfirst($category['category']); ?></a></div>
+                                        <?php
+                                    }
+                                }
+                                ?>
+                            </div>
+                        </li>
+                        <li id="trekking">
+                            <a href="#">Trekking <i class="fa fa-caret-down"></i></a>
+                            <div class="menu_list" id="trekking">
+                                <div id="arrowUp"></div>
+                                <?php
+                                if (!empty($trekking)) {
+                                    foreach ($trekking as $trekType) {
+                                        ?>
+                                        <div><a href="<?php echo baseUrl . 'searchType/' . $string = str_replace(' ', '+', $trekType['type']); ?>"><?php echo ucfirst($trekType['type']); ?></a></div>
+                                        <?php
+                                    }
+                                }
+                                ?>
+                            </div>
+                        </li>
+                        <li id="expedition">
+                            <a href="#">Expedition <i class="fa fa-caret-down"></i></a>
+                            <div class="menu_list" id="expedition">
+                                <div id="arrowUp"></div>
+                                <?php
+                                if (!empty($trekking)) {
+                                    foreach ($trekking as $trekType) {
+                                        ?>
+                                        <div><a href="<?php echo baseUrl . 'searchType/' . $string = str_replace(' ', '+', $trekType['type']); ?>"><?php echo ucfirst($trekType['type']); ?></a></div>
+                                        <?php
+                                    }
+                                }
+                                ?>
+                            </div>
+                        </li>
                         <li><a href="<?php echo baseUrl ?>gallery">Gallery</a></li>
                         <li><a href="<?php echo baseUrl; ?>recommended">Recommended</a></li>
                     </ul>

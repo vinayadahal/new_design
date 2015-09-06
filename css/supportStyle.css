@@ -54,11 +54,17 @@ body{
     margin-left: 30px;
 }
 
-#company .menu_list{
+#company .menu_list,
+#activites .menu_list,
+#trekking .menu_list,
+#expedition .menu_list{
     display: none;
 }
 
-#company:hover .menu_list{
+#company:hover .menu_list,
+#activites:hover .menu_list,
+#trekking:hover .menu_list,
+#expedition:hover .menu_list{
     padding:0;
     width:150px;
     display:block;

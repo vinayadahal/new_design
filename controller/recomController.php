@@ -9,4 +9,4 @@ if (!empty($popular)) {
     }
 }
 $titleController = 'Recommended';
-$treks = $obj_query->select_all_order('review', 'addedOn', 'DESC','NULL','publish', 'yes');
+$treks = $obj_query->select_all_order('review', 'addedOn', 'DESC', 'NULL', 'publish', 'yes');
