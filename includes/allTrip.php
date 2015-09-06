@@ -1,5 +1,5 @@
 <div class="infoContainer" style="width: 790px;">
-    <h3 style="border: none;"><i class="fa fa-globe glyphiconOverride"></i> All Trips</h3>
+    <h4 style="border: none;"><i class="fa fa-globe glyphiconOverride"></i> All Trips</h4>
     <?php
     if (!empty($treks)) {
         foreach ($treks as $trek) {
@@ -22,10 +22,10 @@
                 <br/>
                 <p>
                     <?php
-                    if (strlen($trek['desc']) < 480) {
+                    if (strlen($trek['desc']) < 450) {
                         echo strip_tags($trek['desc']);
                     } else {
-                        echo strip_tags(substr($trek['desc'], 0, 480)) . '...'
+                        echo strip_tags(substr($trek['desc'], 0, 450)) . '...'
                         ?>
                         <span style="color: #1475A1"><a href="<?php echo baseUrl . 'details/' . $trek['id']; ?>">Read More</a> &raquo;</span>
                     <?php } ?>

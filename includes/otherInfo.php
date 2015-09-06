@@ -3,7 +3,7 @@
     <div class="infoContainer" id="informationArea">
         <div class="panel panel-default highlightPnl" style="border: 0px;box-shadow: none;height: auto;">
             <h4><i class="glyphicon glyphicon-thumbs-up glyphiconOverride"></i> Find us in Facebook</h4>
-            <div class="fb-like-box" data-href="https://www.facebook.com/pages/EverGreen-trekking/549031231903436" width="373" data-colorscheme="light" data-show-faces="true" data-header="false" data-stream="false" data-show-border="false"></div>
+            <div class="fb-like-box" data-href="https://www.facebook.com/pages/EverGreen-trekking" width="373" data-colorscheme="light" data-show-faces="true" data-header="false" data-stream="false" data-show-border="false"></div>
         </div>
         <div class="panel panel-default highlightPnl" style="border: 0px;box-shadow: none; margin: 0 10px;height: auto;">
             <h4><i class="glyphicon glyphicon-bookmark glyphiconOverride"></i> Subscribe</h4>

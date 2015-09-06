@@ -52,8 +52,8 @@ require 'includes/header.php';
     </div> 
     <!-- Slider End --> 
 
-    <div class="findTrip">
-        <h3 style="border-bottom: 1px solid #ccc;">Welcome to Evergreen Trekking</h3>
+    <div class="welcomeIntro">
+        <h4 style="border-bottom: 1px solid #ccc;">Welcome to Evergreen Trekking</h4>
         <?php if (!empty($aboutInformation)) { ?>
             <p><?php
                 if (strlen($aboutInformation['content']) < 1400) {
@@ -66,7 +66,7 @@ require 'includes/header.php';
     </div>
 
 </div>
-<div class="divider" style="margin-top: 20px"></div>
+<div class="divider" style="margin-top: 20px;"></div>
 <div class="content">
     <div class="infoWrap">
         <?php require 'includes/allTrip.php'; ?>
@@ -78,17 +78,15 @@ require 'includes/header.php';
 <?php require 'includes/popular.php'; ?>
 <?php require 'includes/otherInfo.php'; ?>
 <script type="text/javascript">
-    $(function () {
-        (function (e, t, n) {
-            var r, i = e.getElementsByTagName(t)[0];
-            if (e.getElementById(n))
-                return;
-            r = e.createElement(t);
-            r.id = n;
-            r.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.0";
-            i.parentNode.insertBefore(r, i)
-        })(document, "script", "facebook-jssdk")
-    });
+//    $(function (e, t, n) {
+//        var r, i = e.getElementsByTagName(t)[0];
+//        if (e.getElementById(n))
+//            return;
+//        r = e.createElement(t);
+//        r.id = n;
+//        r.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.4";
+//        i.parentNode.insertBefore(r, i);
+//    })(document, "script", "facebook-jssdk");
 
     $(document).ready(function () {
         $('#show1').css({display: 'block'});

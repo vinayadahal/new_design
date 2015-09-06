@@ -1,14 +1,12 @@
 <div class="divider"></div>
 <div class="content">
     <div class="infoContainer" style="width: 1200px;">
-        <h3 style="border: none;"><i class="glyphicon glyphicon-globe glyphiconOverride"></i> Popular Trips</h3>
+        <h4 style="border: none;"><i class="glyphicon glyphicon-globe glyphiconOverride"></i> Popular Trips</h4>
         <?php
         foreach ($popTrip as $pop) {
             ?>
             <div class="panel panel-default highlightPnl">
-                <b class="suggestedPnlTitle"><a href="<?php echo baseUrl . 'details/' . $pop['id']; ?>/"><?php echo $pop['title']; ?></a></b>
-                <br/>
-                <br/>
+                <div class="suggestedPnlTitle"><a href="<?php echo baseUrl . 'details/' . $pop['id']; ?>/"><?php echo ucfirst($pop['title']); ?></a></div>
                 <div class="thumbnail" style="display:table">
                     <a href="<?php echo baseUrl . 'details/' . $pop['id']; ?>/">
                         <div class="suggestedPnlIcon" style="background-image:url('<?php echo baseUrl . 'images/thumb/' . basename($pop['imgPath']); ?>');"></div>

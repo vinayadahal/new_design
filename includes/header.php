@@ -70,13 +70,6 @@ header('Expires: ' . gmdate('D, d M Y H:i:s \G\M\T', time() + (60 * 60))); // 1 
                         <li><a href="<?php echo baseUrl ?>gallery">Gallery</a></li>
                         <li><a href="<?php echo baseUrl; ?>recommended">Recommended</a></li>
                     </ul>
-                    <form class="navbar-form navbar-right" role="search" id="searchSiteForm">
-                        <div class="form-group inner-addon right-addon">
-                            <input type="text" class="form-control" placeholder="Search..." />
-                            <i class="glyphicon glyphicon-search iconProp"></i>
-                        </div>
-<!--                        <button type="submit" class="btn btn-default searchIcon" ><img src="images/searchIcon.png" alt="searchIcon" height="20" width="20"></button>-->
-                    </form>
                 </div>
             </div>
         </nav>

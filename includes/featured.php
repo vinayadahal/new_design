@@ -1,14 +1,12 @@
 <div class="divider"></div>
 <div class="content">
     <div class="infoContainer" style="width: 1200px;">
-        <h3 style="border: none;"><i class="glyphicon glyphicon-globe glyphiconOverride"></i> Featured Trips</h3>
+        <h4 style="border: none;"><i class="glyphicon glyphicon-globe glyphiconOverride"></i> Featured Trips</h4>
         <?php
         foreach ($allFeatured as $featured) {
             ?>
             <div class="panel panel-default highlightPnl">
-                <b class="suggestedPnlTitle"><a href="<?php echo baseUrl . 'details/' . $featured['id']; ?>/"><?php echo $featured['title']; ?></a></b>
-                <br/>
-                <br/>
+                <div class="suggestedPnlTitle"><a href="<?php echo baseUrl . 'details/' . $featured['id']; ?>/"><?php echo ucfirst($featured['title']); ?></a></div>
                 <div class="thumbnail" style="display:table">
                     <a href="<?php echo baseUrl . 'details/' . $featured['id']; ?>/">
                         <div class="suggestedPnlIcon" style="background-image:url('<?php echo baseUrl . 'images/thumb/' . basename($featured['imgPath']); ?>');"></div>

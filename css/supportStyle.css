@@ -139,19 +139,20 @@ body{
     margin: 0 auto;
     width: 1200px;
     display: table;
-    background: #fff;
+    /*background: #ccc;*/
+
 }
 
-.findTrip{
+.welcomeIntro{
     float: right; 
     background: #fff;
     height: 349px; 
     width: 470px;
 }
 
-.findTrip h3{
+.welcomeIntro h4{
     color: #333;
-    font-stretch: semi-condensed;
+    /*font-stretch: semi-condensed;*/
     border-bottom: 1px solid #ccc;
     margin-top: 0px;
     padding-bottom: 10px;
@@ -200,10 +201,10 @@ body{
     margin-right: 0px;
 }
 
-.infoContainer h3{
-    padding-bottom: 5px;
+.infoContainer h4{
+    padding: 5px 0px;
     border-bottom: 1px solid #ccc;
-    font-stretch: semi-condensed;
+    /*font-stretch: semi-condensed;*/
 }
 
 .glyphiconOverride{
@@ -234,7 +235,7 @@ body{
 .suggestedPnlIcon{
     position: relative;
     float: left;
-    width: 300px;
+    width: 357px;
     height: 180px;
     background-position: 50% 50%;
     background-repeat: no-repeat;
@@ -245,15 +246,14 @@ body{
     position: relative;
     float: left;
     width: 300px;
-    /*height: 180px;*/
-    /*background-position: 50% 50%;*/
-/*    background-repeat: no-repeat;
-    background-size: cover;*/
 }
 
 .suggestedPnlTitle{
     font-size:15px;
     color: #555;
+    padding: 10px 0px;
+    font-weight: bold;
+    /*background: #000;*/
 }
 
 .reviewPnl{
@@ -266,14 +266,17 @@ body{
 
 .highlightPnl{
     float: left;
-    width: 393px;
+    width: 388px;
+    /*width: 383px;*/
     height: 500px;
     padding: 10px;
     display: block;
 }
 
 .highlightPnl:nth-child(3){
-    margin: 0px 10px;
+    margin: 0px 13px;
+    /*background: red;*/
+    /*margin:0px 20px;*/
 }
 
 .highlightThumb{

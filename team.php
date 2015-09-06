@@ -7,14 +7,13 @@ require 'includes/header.php';
 <div class="content">
     <div class="infoWrap">
         <div class="infoContainer" style="width: 790px;">
-            <h3 style="border: none;"><i class="fa fa-user-secret glyphiconOverride"></i> Our Team Members</h3>
+            <h4 style="border: none;"><i class="fa fa-user glyphiconOverride"></i> Our Team Members</h4>
             <?php
             if (!empty($teamInfo)) {
                 foreach ($teamInfo as $team) {
                     ?>
                     <div class="panel panel-default suggestedPnl">
                         <div class="thumbnail thumbnailOverride">
-                            <!--<div class="teamIcon" style="background-image:url('<?php echo $team['photo'] ?>');"></div>-->
                             <div class="teamIcon">
                                 <img src="<?php echo $team['photo']; ?>" alt="Team Member" title="Team Member"/>
                             </div>
@@ -32,22 +31,24 @@ require 'includes/header.php';
             }
             ?>
         </div>
-        <?php require 'includes/reviewBar.php'; ?>
+        <div class="infoContainer" style="width: 390px;">
+            <?php require 'includes/searchSiteOnly.php'; ?>
+        </div>
     </div>
 </div>
 <?php require 'includes/otherInfo.php'; ?>
 <script type="text/javascript">
-    $(function () {
-        (function (e, t, n) {
-            var r, i = e.getElementsByTagName(t)[0];
-            if (e.getElementById(n))
-                return;
-            r = e.createElement(t);
-            r.id = n;
-            r.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.0";
-            i.parentNode.insertBefore(r, i)
-        })(document, "script", "facebook-jssdk")
-    });
+//    $(function () {
+//        (function (e, t, n) {
+//            var r, i = e.getElementsByTagName(t)[0];
+//            if (e.getElementById(n))
+//                return;
+//            r = e.createElement(t);
+//            r.id = n;
+//            r.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.0";
+//            i.parentNode.insertBefore(r, i)
+//        })(document, "script", "facebook-jssdk")
+//    });
 
     $(document).ready(function () {
         $('#show1').css({display: 'block'});
