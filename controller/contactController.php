@@ -22,15 +22,10 @@ if (!empty($popular)) {
     }
 }
 
-$dropDownArea = $obj_query->select_distinct_col('area', 'trip');
-$dropDownActivity = $obj_query->select_distinct_col('category', 'category');
-$dropDownDuration = $obj_query->select_distinct_col('duration', 'trip');
-$dropDownDeparture = $obj_query->select_distinct_col('departure', 'trip');
 if (isset($_SESSION['alert'])) {
     $alert = $_SESSION['alert'];
     unset($_SESSION['alert']);
 }
 
 $contactInformation = $obj_query->select_single(array('title', 'content', 'desc'), 'content', 'keyword', 'contact');
-
 $titleController = ucfirst($contactInformation['title']);

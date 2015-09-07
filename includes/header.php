@@ -5,7 +5,6 @@ if (!empty($ext[1])) {
     header('location:' . baseUrl . 'error/');
 }
 $page = substr($fullUrl['path'], strrpos($fullUrl['path'], '/') + 1);
-echo $page;
 if (empty($page)) {
     $title = 'Home';
 } else {
@@ -110,7 +109,8 @@ header('Expires: ' . gmdate('D, d M Y H:i:s \G\M\T', time() + (60 * 60))); // 1 
                             </div>
                         </li>
                         <li><a href="<?php echo baseUrl ?>gallery">Gallery</a></li>
-                        <li><a href="<?php echo baseUrl; ?>recommended">Recommended</a></li>
+                        <li><a href="<?php echo baseUrl; ?>recommend">Recommend us</a></li>
+                        <li><a href="<?php echo baseUrl; ?>contact">Contact us</a></li>
                     </ul>
                 </div>
             </div>

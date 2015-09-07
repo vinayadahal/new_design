@@ -20,13 +20,13 @@
                     if (strlen($review['description']) < 480) {
                         echo $review['description'];
                     } else {
-                        echo substr($review['description'], 0, 480) . '... <span style="color: #1475A1"><a href="#">Read More</a> &raquo;</span>';
+                        echo substr($review['description'], 0, 480) . '... <span style="color: #1475A1"><a href="' . baseUrl . 'showRecommend/' . $review['id'] . '">Read More</a> &raquo;</span>';
                     }
                     ?>
                 </p>
             </div>
         <?php } ?>
-        <a href="<?php echo baseUrl; ?>recommended">
+        <a href="<?php echo baseUrl; ?>recommend">
             <button class="btn btn-default"><i class="fa fa-comments glyphiconOverride"></i> All Recommendations</button>
         </a>
     <?php } ?>
