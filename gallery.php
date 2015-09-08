@@ -4,7 +4,7 @@ require 'controller/galController.php';
 require 'includes/header.php';
 ?>
 <div class="content">
-    <div class="infoContainer" style="width: 1200px;">
+    <div class="infoContainer" style="width: 1200px; margin: 0px 0px 20px 0px;">
         <h4 style="border: none;"><i class="glyphicon glyphicon-globe glyphiconOverride"></i> Gallery</h4>
         <?php
         if (!empty($imageNames)) {

@@ -1,6 +1,6 @@
 <div class="divider"></div>
 <div class="content">
-    <div class="infoContainer" style="width: 1190px;">
+    <div class="infoContainer" style="width: 1200px; margin: 0px">
         <h4 style="border: none;"><i class="glyphicon glyphicon-globe glyphiconOverride"></i> Latest Trips</h4>
         <?php if (!empty($latestTrips)) { ?>
             <?php foreach ($latestTrips as $latestTrip) { ?>

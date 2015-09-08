@@ -78,16 +78,6 @@ require 'includes/header.php';
 <?php require 'includes/featured.php'; ?>
 <?php require 'includes/otherInfo.php'; ?>
 <script type="text/javascript">
-//    $(function (e, t, n) {
-//        var r, i = e.getElementsByTagName(t)[0];
-//        if (e.getElementById(n))
-//            return;
-//        r = e.createElement(t);
-//        r.id = n;
-//        r.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.4";
-//        i.parentNode.insertBefore(r, i);
-//    })(document, "script", "facebook-jssdk");
-
     $(document).ready(function () {
         $('#show1').css({display: 'block'});
         $('#plus1').css({display: 'none'});

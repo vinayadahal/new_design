@@ -10,9 +10,10 @@ if (empty($res)) {
 }
 ?>
 <div class="popupBackground" id="background">
-    <div class="feedsBg" id="feedsBg">
+    <div class="panel panel-default feedsBg" id="feedsBg">
         <a href="javascript:void(0)"><span class="closeForm" id="closeForm"></span></a>
-        <div class="heading" id="popHead"></div>
+        <div class="panel-heading" style="background-color: #1475A1;color: #fff;font-weight: bold;" id="popHead"></div>
+        <!--<div class="heading" id="popHead"></div>-->
         <div class="wrapForm" id="formWrap">
             <div style="width:200px;height:200px;text-align:center" id="loading">
                 <img src="<?php echo baseUrl; ?>images/loader.gif" alt="loading" style="height:64px;width:64px" />
@@ -31,19 +32,19 @@ if (empty($res)) {
             </div>
             <form method="POST" id="reviewForm" url="<?php echo baseUrl; ?>sendReview/" >
                 <input type="hidden" name="reviewMail" value="" id="reviewMail"/>
-                <table cellspacing="5" width="480">
+                <table cellspacing="5" width="490">
                     <tr>
                         <td>Name:</td>
                     </tr>
                     <tr>
-                        <td><input type="text" name="name" class="txtReview" id="name"/></td>
+                        <td><input type="text" name="name" class="form-control txtReview" id="name"/></td>
                     </tr>
                     <tr>
                         <td>Country:</td>
                     </tr>
                     <tr>
                         <td>
-                            <select name="country" id="country" class="txtReview">
+                            <select name="country" id="country" class="form-control txtReview">
                                 <option value="Afghanistan">Afghanistan</option>
                                 <option value="Åland Islands">Åland Islands</option>
                                 <option value="Albania">Albania</option>
@@ -285,22 +286,22 @@ if (empty($res)) {
                         <td>Email:</td>
                     </tr>
                     <tr>
-                        <td><input type="text" name="email" class="txtReview" id="email"/></td>
+                        <td><input type="text" name="email" class="form-control txtReview" id="email"/></td>
                     </tr>
                     <tr id="lblVisited">
                         <td>Visited Date:</td>
                     </tr>
                     <tr id="txtVisited">
-                        <td><input type="text" name="date" class="txtReview" id="departure"></td>
+                        <td><input type="text" name="date" class="form-control txtReview" id="departure"/></td>
                     </tr>
                     <tr>
                         <td id="labelDesc"></td>
                     </tr>
                     <tr>
-                        <td><textarea name="desc" class="txtAreaReview" id="desc"></textarea></td>
+                        <td><textarea name="desc" class="form-control txtAreaReview" rows="13" id="desc"></textarea></td>
                     </tr>
                     <tr>
-                        <td><input type="submit" value="Send" class="bookNow"/></td>
+                        <td><input type="submit" value="Send" class="btn btn-default popBtn" style="margin-top:10px;"/></td>
                     </tr>
                 </table>
             </form>
@@ -359,7 +360,16 @@ if (empty($res)) {
         </div>
     </div>
 </div>
-<script>
+<script type="text/javascript">
+    (function (e, t, n) {
+        var r, i = e.getElementsByTagName(t)[0];
+        if (e.getElementById(n))
+            return;
+        r = e.createElement(t);
+        r.id = n;
+        r.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.4";
+        i.parentNode.insertBefore(r, i);
+    })(document, "script", "facebook-jssdk");
     $("#departure").datepicker({dateFormat: 'yy-mm-dd'});
 </script>
 </body> 
