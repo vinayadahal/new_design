@@ -259,7 +259,6 @@ body{
     color: #555;
     padding: 10px 0px;
     font-weight: bold;
-    /*background: #000;*/
 }
 
 .reviewPnl{
@@ -273,7 +272,6 @@ body{
 .highlightPnl{
     float: left;
     width: 388px;
-    /*width: 383px;*/
     height: 500px;
     padding: 10px;
     display: block;
@@ -281,8 +279,6 @@ body{
 
 .highlightPnl:nth-child(3){
     margin: 0px 13px;
-    /*background: red;*/
-    /*margin:0px 20px;*/
 }
 
 .highlightThumb{
@@ -328,7 +324,6 @@ body{
 
 .footerBody{
     display: block;
-    /*padding-top: 20px;*/ 
     background: #095077;
 }
 
@@ -427,12 +422,6 @@ body{
     text-align: center;
 }
 
-/*.searchPanels:hover{
-    border: 1px solid #e00;
-    opacity: 0.9;
-    cursor: pointer;
-}*/
-
 .searchPanels:nth-child(4n){
     margin-right: 0px;
     width: 211px;
@@ -465,8 +454,6 @@ body{
     text-decoration: underline;
 }
 
-
-
 .gallery{
     display: table;
     padding: 10px 0px;
@@ -474,12 +461,13 @@ body{
 }
 
 .gallery_icon{
-    width: 149px;
-    height: 90px;
-    margin: 0 10px 10px 0px;
+    width: 290px;
+    height: 150px;
     float: left;
     display: table-cell;
-    overflow:hidden;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 .gallery_icon:hover{
@@ -488,11 +476,12 @@ body{
 }
 
 .gallery_preview{
-    float:left;
-    width:149px;
+    display: table-cell;
+    float: left;
+    margin: 0px 0px 0px 0px;
 }
 
-.gallery_icon:nth-child(6n){
+.gallery_icon:nth-child(4n+1){
     margin-right: 0px;
 }
 

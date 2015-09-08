@@ -5,5 +5,4 @@ define('host', 'localhost');
 define('database', 'newtest');
 define('username', 'root');
 define('password', '');
-define('setPersistence', true); // Setting true makes database connection faster
-//echo baseUrl;
+define('setPersistence', FALSE); // Setting true makes database connection faster
