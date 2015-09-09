@@ -1,14 +1,7 @@
 <div class="infoContainer" style="width: 390px;">
 
     <?php require 'searchSiteOnly.php'; ?>
-    <!--    <div class="panel panel-default reviewPnl">
-            <div class="accordainHeading" id="click1"><a href="javascript:void(0);">Heading1</a></div>
-            <div class="accordainBody" id="show1">one show</div>
-            <div class="accordainHeading" id="click2">Heading2</div>
-            <div class="accordainBody" id="show2">two show</div>
-            <div class="accordainHeading" id="click3">Heading3</div>
-            <div class="accordainBody" id="show3">three show</div>
-        </div>-->
+    <?php require 'accordain.php'; ?>
     <?php if (!empty($reviews)) { ?>
         <h4 style="border: none;"><i class="fa fa-comments glyphiconOverride"></i> Recommendation</h4>
         <?php foreach ($reviews as $review) { ?>

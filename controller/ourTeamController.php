@@ -16,7 +16,6 @@ if (!empty($teamData)) {
         
         if (!empty($team['photo'])) {
             $thumbPath = 'images/team/thumb/' . basename($team['photo']);
-            echo 'photo location: '. $team['photo'];
         } else {
             if ($team['gender'] == 'Male' || $team['gender'] == 'male') {
                 $thumbPath = 'images/team/blankMale.jpg';

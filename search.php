@@ -71,7 +71,6 @@ require 'includes/header.php';
         }
         if (empty($resultSearch) && empty($searchCategory)) {
             echo '<p>No result to display</p>';
-            
         }
         ?>
     </div>

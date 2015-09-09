@@ -4,6 +4,7 @@
     margin-bottom: 5px;
     color: #fff;
     font-weight: bold;
+    position: relative;
 }
 
 .openClose{
@@ -28,3 +29,26 @@
     float: left;
     margin-right: 10px;
 }
+
+.expand-close{
+    position: absolute;
+    right: 5px;
+    top: 5px;
+    width: 20px;
+    height: 20px;
+    background-image: url(../images/baseUI.png);
+    background-repeat: no-repeat;
+    background-position: -31px -126px;
+}
+
+.expand-open{
+    position: absolute;
+    right: 5px;
+    top: 5px;
+    width: 20px;
+    height: 20px;
+    background-image: url(../images/baseUI.png);
+    background-repeat: no-repeat;
+    background-position: -62px -126px;
+}
+

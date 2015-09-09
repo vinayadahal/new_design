@@ -7,7 +7,7 @@ require 'includes/header.php';
 <div class="content">
     <div class="infoWrap">
         <div class="infoContainer" style="width: 790px;">
-            <h4 style="border: none;"><i class="fa fa-user glyphiconOverride"></i> Our Team Members</h4>
+            <h4 style="border: none;"><i class="fa fa-users glyphiconOverride"></i> Our Team Members</h4>
             <?php
             if (!empty($teamInfo)) {
                 foreach ($teamInfo as $team) {
@@ -24,7 +24,7 @@ require 'includes/header.php';
                         <b style="color: #1475A1;">Designation: <?php echo $team['designation']; ?></b> 
                         <br/>
                         <br/>
-                        <p><?php echo $team['desc']; ?></p>
+                        <p><?php echo strip_tags($team['desc']); ?></p>
                     </div>
                     <?php
                 }
@@ -33,6 +33,7 @@ require 'includes/header.php';
         </div>
         <div class="infoContainer" style="width: 390px;">
             <?php require 'includes/searchSiteOnly.php'; ?>
+            <?php require 'includes/accordain.php'; ?>
         </div>
     </div>
 </div>

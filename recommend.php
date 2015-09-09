@@ -28,6 +28,7 @@ require 'includes/header.php';
         </div>
         <div class="infoContainer" style="width: 390px;">
             <?php require 'includes/searchSiteOnly.php'; ?>
+            <?php require 'includes/accordain.php'; ?>
         </div>
     </div>
 </div>
