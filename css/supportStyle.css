@@ -585,3 +585,18 @@ body{
     display:none;
     margin:150px auto 0px auto
 }
+
+.detail table{
+    width: 400px;
+    border: 1px solid #e8e8e8;
+    border-spacing: 0px;
+}
+
+.detail table th{
+    padding: 5px;
+}
+
+.detail table td{
+    border-top: 1px solid #e8e8e8;
+    padding: 5px;
+}

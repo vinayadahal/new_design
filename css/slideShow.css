@@ -2,7 +2,6 @@
     position: relative;
     width: 700px;
     height: 350px;
-    /*overflow: hidden;*/
     background: #222;
     float: left;
     display: table-cell;
@@ -57,8 +56,6 @@
 }
 
 .captionOrange{
-    /*background: #EB5100;*/
-    /*background-color: rgba(235, 81, 0, 0.6);*/
     background: rgba(200,200,200,0.5);
 }
 
