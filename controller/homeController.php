@@ -21,7 +21,7 @@ $treks = $obj_query->select_all('trip', $start, $dataPerPage);
 //pagination end
 if (!empty($popular)) {
     foreach ($popular as $visited) {
-        $popTrip[] = $obj_query->select_single(array('id', 'title', 'imgPath', 'desc','duration', 'area'), 'trip', 'id', $visited['tripId']);
+        $popTrip[] = $obj_query->select_single(array('id', 'title', 'imgPath', 'desc', 'duration', 'area'), 'trip', 'id', $visited['tripId']);
     }
 }
 
@@ -31,5 +31,5 @@ if (isset($_SESSION['alert'])) {
 }
 
 $aboutInformation = $obj_query->select_single(array('title', 'content', 'desc', 'keyword'), 'content', 'keyword', 'about');
-$shortSweet=$obj_query->select_all_order('trip', 'added', 'DESC', '3', 'category', 'short and sweet');
+$shortSweet = $obj_query->select_all_order('trip', 'added', 'DESC', '3', 'category', 'short and sweet');
 $reviews = $obj_query->select_all_order('review', 'addedOn', 'DESC', '3', 'publish', 'yes');

@@ -77,46 +77,5 @@ require 'includes/header.php';
 <?php require 'includes/latest.php'; ?>
 <?php require 'includes/featured.php'; ?>
 <?php require 'includes/otherInfo.php'; ?>
-<script type="text/javascript">
-    $(document).ready(function () {
-        $('#show1').css({display: 'block'});
-        $('#plus1').css({display: 'none'});
-        $('#plus2').css({display: 'block'});
-        $('#plus3').css({display: 'block'});
-        $('#minus1').css({display: 'block'});
-        $('#minus2').css({display: 'none'});
-        $('#minus3').css({display: 'none'});
-        $('#click1').click(function () {
-            $('#show1').slideToggle();
-            $('#show2').slideUp();
-            $('#show3').slideUp();
-            $('#click1 span').toggle();
-            $('#plus2').css({display: 'block'});
-            $('#plus3').css({display: 'block'});
-            $('#minus2').css({display: 'none'});
-            $('#minus3').css({display: 'none'});
-        });
-        $('#click2').click(function () {
-            $('#show2').slideToggle();
-            $('#show1').slideUp();
-            $('#show3').slideUp();
-            $('#click2 span').toggle();
-            $('#plus1').css({display: 'block'});
-            $('#plus3').css({display: 'block'});
-            $('#minus1').css({display: 'none'});
-            $('#minus3').css({display: 'none'});
-        });
-        $('#click3').click(function () {
-            $('#show3').slideToggle();
-            $('#show2').slideUp();
-            $('#show1').slideUp();
-            $('#click3 span').toggle();
-            $('#plus1').css({display: 'block'});
-            $('#plus2').css({display: 'block'});
-            $('#minus1').css({display: 'none'});
-            $('#minus2').css({display: 'none'});
-        });
-    });
-</script>
 <?php
 require 'includes/footer.php';

@@ -7,4 +7,5 @@ if (!empty($_GET['target'])) {
 } else {
     $reviews = $obj_query->select_all_order('review', 'addedOn', 'DESC', 'NULL', 'publish', 'yes');
 }
+$shortSweet = $obj_query->select_all_order('trip', 'added', 'DESC', '3', 'category', 'short and sweet');
 $titleController = 'Recommended';

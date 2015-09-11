@@ -45,29 +45,4 @@ function insertVisited($obj_query, $val) {
     $obj_query->insert(array('tripId', 'visited', 'session_id'), array($val, 1, $_SESSION['normalUser']), 'visited');
 }
 
-$latestTrips = $obj_query->select_all_order('trip', 'added', 'DESC', '3');
-$allFeatured = $obj_query->select_all_order('trip', 'added', 'DESC', '3', 'featured', 'Yes');
-$popular = $obj_query->select_all_order('visited', 'visited', 'DESC', '3');
-//for pagination
-$allCountTrek = count($obj_query->select_all('trip'));
-$dataPerPage = 5;
-$num_pages = ceil($allCountTrek / $dataPerPage);
-if (!empty($_GET['page']) && $_GET['page'] > 1) {
-    $page = $_GET['page'] - 1;
-    $start = ($dataPerPage * $page);
-} else {
-    $start = 0;
-}
-$sn = $start + 1;
-$treks = $obj_query->select_all('trip', $start, $dataPerPage);
-//pagination end
-if (!empty($popular)) {
-    foreach ($popular as $visited) {
-        $popTrip[] = $obj_query->select_single(array('id', 'title', 'imgPath', 'desc'), 'trip', 'id', $visited['tripId']);
-    }
-}
-
-$dropDownArea = $obj_query->select_distinct_col('area', 'trip');
-$dropDownActivity = $obj_query->select_distinct_col('category', 'category');
-$dropDownDuration = $obj_query->select_distinct_col('duration', 'trip');
-$dropDownDeparture = $obj_query->select_distinct_col('departure', 'trip');
+$shortSweet = $obj_query->select_all_order('trip', 'added', 'DESC', '3', 'category', 'short and sweet');
