@@ -244,6 +244,16 @@ body{
     float: left;
 }
 
+.shortSweetIcon{
+    position: relative;
+    float: left;
+    width: 150px;
+    height: 90px;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
 .suggestedPnlTitle{
     font-size:15px;
     color: #555;

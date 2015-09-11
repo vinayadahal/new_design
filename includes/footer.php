@@ -371,6 +371,38 @@ if (empty($res)) {
         i.parentNode.insertBefore(r, i);
     })(document, "script", "facebook-jssdk");
     $("#departure").datepicker({dateFormat: 'yy-mm-dd'});
+<?php if (!empty($shortSweet)) { ?>
+        $(document).ready(function () {
+            $('#show1').css({display: 'block'});
+    <?php for ($i = 1; $i <= count($shortSweet); $i++) { ?>
+        <?php
+        if ($i != 1 && $i < 2) {
+            $prev = $i - 1;
+        } else {
+            $prev = $i + 1;
+        }
+        if ($i < count($shortSweet)) {
+            $next = $prev + 1;
+        } else {
+//            if($prev)
+            $next = $prev - 1;
+        }
+        ?>
+                $('#plus<?php echo $i; ?>').css({display: 'none'});
+                $('#minus<?php echo $i; ?>').css({display: 'block'});
+                $('#click<?php echo $i; ?>').click(function () {
+                    $('#show<?php echo $i; ?>').slideToggle();
+                    $('#show<?php echo $prev; ?>').slideUp();
+                    $('#show<?php echo $next; ?>').slideUp();
+                    $('#click<?php echo $i; ?> span').toggle();
+                    $('#plus<?php echo $prev; ?>').css({display: 'block'});
+                    $('#plus<?php echo $next; ?>').css({display: 'block'});
+                    $('#minus<?php echo $prev; ?>').css({display: 'none'});
+                    $('#minus<?php echo $next; ?>').css({display: 'none'});
+                });
+    <?php } ?>
+        });
+<?php } ?>
 </script>
 </body> 
 </html>
