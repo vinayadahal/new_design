@@ -402,6 +402,9 @@ if (empty($res)) {
         });
 <?php } ?>
 </script>
+<script type="text/javascript" src="<?php echo baseUrl; ?>js/styler.js"></script>
+<script type="text/javascript" src="<?php echo baseUrl; ?>js/jquery-ui.min.js"></script>
+<script type="text/javascript" src="<?php echo baseUrl; ?>js/scripts.js"></script>
 </body> 
 </html>
 

@@ -33,16 +33,13 @@ header('Expires: ' . gmdate('D, d M Y H:i:s \G\M\T', time() + (60 * 60))); // 1 
         <link href="<?php echo baseUrl; ?>css/font-awesome.min.css" type="text/css" rel="stylesheet" />
         <link href="<?php echo baseUrl; ?>css/supportStyle.css" type="text/css" rel="stylesheet" />
         <link href="<?php echo baseUrl; ?>css/jquery-ui.min.css" type="text/css" rel="stylesheet" />
-        <link href="<?php echo baseUrl; ?>css/slideShow.css" type="text/css" rel="stylesheet" />
         <link href="<?php echo baseUrl; ?>css/accordain.css" type="text/css" rel="stylesheet" />
-        <script type="text/javascript" src="<?php echo baseUrl; ?>js/styler.js"></script>
-        <script type="text/javascript" src="<?php echo baseUrl; ?>js/supportScript.js"></script>
-        <script type="text/javascript" src="<?php echo baseUrl; ?>js/jssor.js"></script>
-        <script type="text/javascript" src="<?php echo baseUrl; ?>js/jssor.slider.js"></script>
-        <script type="text/javascript" src="<?php echo baseUrl; ?>js/slideShow.js"></script>
-        <script type="text/javascript" src="<?php echo baseUrl; ?>js/jquery-ui.min.js"></script>
-        <script type="text/javascript" src="<?php echo baseUrl; ?>js/scripts.js"></script>
-
+        <?php if ($title == "Home") { ?>
+            <link href="<?php echo baseUrl; ?>css/slideShow.css" type="text/css" rel="stylesheet" />
+            <script type="text/javascript" src="<?php echo baseUrl; ?>js/jssor.js"></script>
+            <script type="text/javascript" src="<?php echo baseUrl; ?>js/jssor.slider.js"></script>
+            <script type="text/javascript" src="<?php echo baseUrl; ?>js/slideShow.js"></script>
+        <?php } ?>
     </head> 
     <body> 
         <nav class="navbar navbar-default">
