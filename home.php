@@ -22,7 +22,7 @@ require 'includes/header.php';
                         <div>
                             <img u="image" src="<?php echo baseUrl . $slider['finalUrl']; ?>" />
                             <div u=caption t="CLIP|LR" t2="B" du="2000" class="captionOrange"  style="position:absolute; left:20px; top: 10px;height:30px; width: 200px"> 
-                                <?php echo $slider['caption']; ?>
+                                <?php echo ucfirst($slider['caption']); ?>
                             </div>
                         </div>
                         <?php

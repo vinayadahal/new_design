@@ -25,6 +25,7 @@ RewriteRule    ^team/    team.php    [NC]
 RewriteRule    ^recommend/       recommend.php [NC]
 RewriteRule    ^showRecommend/([0-9]+)/?$       recommend.php?target=showSingle&id=$1 [NC]
 RewriteRule    ^policies/    policies.php    [NC]
+RewriteRule    ^feedback/    includes/feedback.php [NC]
 RewriteRule    ^sendReview/    controller/reviewController.php?target=sendReview    [NC]
 
 

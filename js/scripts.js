@@ -288,23 +288,39 @@ function unloadImage() {
     unsetScrollPosition();
 }
 
-function loadForm(heading) {
+function loadForm(heading, url) {
     $('#country').val('');
     $("#background").fadeIn();
-    $("#feedsBg").fadeIn(600);
-    $("#popHead").html(heading);
-    if (heading === "Recommend Trip") {
-        $("#labelDesc").html("Recommend Trip:");
-        $("#lblVisited, #txtVisited").show();
-    } else if (heading === "Suggestion") {
-        $("#labelDesc").html("Suggestion:");
-        $("#lblVisited, #txtVisited").hide();
-    } else {
-        $("#labelDesc").html("Feedback:");
-        $("#lblVisited, #txtVisited").hide();
-    }
-    $("#reviewMail").val(heading);
-    setScrollPosition();
+
+    $.ajax({
+        url: url,
+        type: 'get',
+        cache: false,
+        success: function (response) {
+            $("#reviewForm").html(response);
+            console.log(response);
+            $("#feedsBg").fadeIn(600);
+            $("#popHead").html(heading);
+            if (heading === "Recommend Trip") {
+                $("#labelDesc").html("Recommend Trip:");
+                $("#lblVisited, #txtVisited").show();
+            } else if (heading === "Suggestion") {
+                $("#labelDesc").html("Suggestion:");
+                $("#lblVisited, #txtVisited").hide();
+            } else {
+                $("#labelDesc").html("Feedback:");
+                $("#lblVisited, #txtVisited").hide();
+            }
+            $("#reviewMail").val(heading);
+            setScrollPosition();
+        },
+        failure: function (response) {
+            $("#reviewForm").html('No data recieved from server');
+        }
+    });
+
+
+
 }
 
 function unloadForm() {

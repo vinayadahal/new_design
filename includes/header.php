@@ -18,9 +18,9 @@ $categories = $obj_query->select_all('category');
 $trekking = $obj_query->select_all('trekking');
 $expedition = $obj_query->select_all('expedition');
 $_SESSION['normalUser'] = session_id();
-header('Cache-Control: Public');
-header('Pragma: cache');
-header('Expires: ' . gmdate('D, d M Y H:i:s \G\M\T', time() + (60 * 60))); // 1 hour
+//header('Cache-Control: Public');
+//header('Pragma: cache');
+//header('Expires: ' . gmdate('D, d M Y H:i:s \G\M\T', time() + (60 * 60))); // 1 hour
 ?>
 <!DOCTYPE html>
 <html> 

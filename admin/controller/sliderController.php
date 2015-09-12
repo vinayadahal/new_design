@@ -199,19 +199,6 @@ function cropImage($imgPath, $coordX, $coordY, $coordW, $coordH, $text = NULL) {
     $img_height_new = 350;
     $new_image = ImageCreateTrueColor($img_width_new, $img_height_new);
     imagecopyresampled($new_image, $src_img, 0, 0, $coordX, $coordY, $coordW, $coordH, $img_width_new, $img_height_new); // New save location
-// code to write text to image
-    $black = imagecolorallocate($new_image, 0, 0, 0);
-    $white = imagecolorallocate($new_image, 255, 255, 255);
-
-    $font = 'arial.ttf';
-    $bbox = imagettfbbox(16, 0, $font, $text);
-    $x = $bbox[2] + 20;
-    imagefilledrectangle($new_image, 5, 5, $x, 40, $black);
-
-// Add some shadow to the text
-    imagettftext($new_image, 16, 0, 11, 31, $black, $font, $text);
-// Add the text
-    imagettftext($new_image, 16, 0, 10, 30, $white, $font, $text);
     $new_file_path = $_SESSION['rootDir'] . '/images/slideShow/' . basename($imgPath);
     return create_image($new_image, $new_file_path, $mime, basename($imgPath), 'slide');
 }

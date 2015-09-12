@@ -232,11 +232,11 @@ function create_image($new_image, $new_file_path, $mime, $filename) {
     if ($mime['mime'] == 'image/png') {
         $result = imagepng($new_image, $new_file_path, 9);
     } elseif ($mime['mime'] == 'image/jpg') {
-        $result = imagejpeg($new_image, $new_file_path, 80);
+        $result = imagejpeg($new_image, $new_file_path, 70);
     } elseif ($mime['mime'] == 'image/jpeg') {
-        $result = imagejpeg($new_image, $new_file_path, 80);
+        $result = imagejpeg($new_image, $new_file_path, 70);
     } elseif ($mime['mime'] == 'image/pjpeg') {
-        $result = imagejpeg($new_image, $new_file_path, 80);
+        $result = imagejpeg($new_image, $new_file_path, 70);
     }
     return 'images/thumb/' . $filename;
 }
