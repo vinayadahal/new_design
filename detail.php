@@ -16,8 +16,8 @@ require 'includes/header.php';
                     <div class="suggestedPnlIcon" style="width: 500px; height:250px; background-image:url('<?php echo baseUrl . 'images/thumb/' . basename($res['imgPath']); ?>');"></div>
                 </div>
                 <div class="detail">
-                    <?php echo $res['desc']; ?>
-                    <table>
+                    <?php echo strip_tags($res['desc']); ?>
+                    <table style="margin-top:20px;">
                         <tr>
                             <th colspan="2">Summary:</th>
                         </tr>

@@ -39,7 +39,12 @@ require 'includes/header.php';
                         google.maps.event.addDomListener(window, 'load', init_map);
                     </script>                    
                     <?php echo $contactInformation['content']; ?>
-                <?php } ?>
+                <?php } else { ?>
+                    <h4 style="border:none;"><i class="fa fa-phone-square glyphiconOverride"></i> Contact Information</h4>
+                    <?php
+                    echo "No contact information has been added.";
+                }
+                ?>
             </div>
         </div>
         <div class="infoContainer" style="width: 390px;">
@@ -47,7 +52,7 @@ require 'includes/header.php';
             <?php require 'includes/accordain.php'; ?>
         </div>
     </div>
-</div>
-<?php require 'includes/otherInfo.php'; ?>
-<?php
-require 'includes/footer.php';
+    <?php require 'includes/otherInfo.php'; ?>
+    <?php
+    require 'includes/footer.php';
+    

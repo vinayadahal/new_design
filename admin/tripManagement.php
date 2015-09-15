@@ -33,9 +33,9 @@ require 'includes/header.php';
                         <td><?php echo $info['duration']; ?></td>
                         <td><?php
                             if (strlen($info['desc']) < 290) {
-                                echo $info['desc'];
+                                echo strip_tags($info['desc']);
                             } else {
-                                echo substr($info['desc'], 0, 290) . '...';
+                                echo strip_tags(substr($info['desc'], 0, 290)) . '...';
                             }
                             ?></td>
                         <td width="10"><a href="<?php echo baseUrl ?>admin/editTrip/<?php echo $info['id']; ?>/" title="Edit"><i class="glyphicon glyphicon-list-alt glyphicon_list_override"></i></a></td>

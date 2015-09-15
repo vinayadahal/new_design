@@ -74,16 +74,16 @@ if (empty($res)) {
 <script type="text/javascript" src="<?php echo baseUrl; ?>js/jquery-ui.min.js"></script>
 <script type="text/javascript" src="<?php echo baseUrl; ?>js/scripts.js"></script>
 <script type="text/javascript">
-//    (function (e, t, n) {
-//        var r, i = e.getElementsByTagName(t)[0];
-//        if (e.getElementById(n))
-//            return;
-//        r = e.createElement(t);
-//        r.id = n;
-//        r.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.4";
-//        i.parentNode.insertBefore(r, i);
-//    })(document, "script", "facebook-jssdk");
-                        
+                        (function (e, t, n) {
+                            var r, i = e.getElementsByTagName(t)[0];
+                            if (e.getElementById(n))
+                                return;
+                            r = e.createElement(t);
+                            r.id = n;
+                            r.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.4";
+                            i.parentNode.insertBefore(r, i);
+                        })(document, "script", "facebook-jssdk");
+
 <?php if (!empty($shortSweet)) { ?>
                             $(document).ready(function () {
                                 $('#show1').css({display: 'block'});

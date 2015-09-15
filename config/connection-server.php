@@ -1,8 +1,8 @@
 <?php
 
-define('baseUrl', 'http://evergreentrekking.com/new_design/');
+define('baseUrl', 'http://evergreentrekking.com/');
 define('host', '127.0.0.1');
-define('database', 'evergree_database');
+define('database', 'evergree_database_new');
 define('username', 'evergree_user');
 define('password', 'evergreen123DB');
-define('setPersistence', FALSE); // Setting true makes database connection faster
+define('setPersistence', TRUE); // Setting true makes database connection faster
